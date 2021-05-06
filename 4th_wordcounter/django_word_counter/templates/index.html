@@ -17,7 +17,7 @@
 
     <form action="{% url 'result' %}" method="POST">
         <textarea rows="50" cols="80" name="sentence"></textarea><br>
-        <input type="submit"></input>
+        {% csrf_token %} <input type="submit"></input>
     </form>
 </body>
 </html>
